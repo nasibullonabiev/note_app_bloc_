@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
       child: BlocBuilder<ThemeBloc, ThemeState>(
         builder: (context, state) {
           return MaterialApp(
+            debugShowCheckedModeBanner: false,
             title: 'Note App',
             theme: state.isDarkMode ? ThemeData.dark() : ThemeData.light(),
             home: const NoteListPage(),
